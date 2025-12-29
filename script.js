@@ -23,7 +23,7 @@ function generateBoxes(x) {
     for(let i=0; i<x; i++){
 
     let box = document.createElement("img")
-    box.src = "files/box_closed.png"
+    box.src = "box_closed.png"
     box.dataset.index = i;
     box.classList.add("image");
     box.addEventListener('click', boxClick);
@@ -39,7 +39,7 @@ function boxClick(event) {
     let boxIndex = Number(b.dataset.index);
 
     if (boxIndex == treasureIndex) {
-        b.src = 'files/win_box.png';
+        b.src = 'win_box.png';
         t2.innerText = 'You won';
         winSound.play();
 
@@ -50,7 +50,7 @@ function boxClick(event) {
 
 
     } else {
-        b.src = 'files/lose_box.png';
+        b.src = 'lose_box.png';
         l--;
         loseSound.play();
         lives.innerText = '💖'.repeat(l);
@@ -72,3 +72,4 @@ buttonReset.addEventListener('click', () => {
 generateBoxes(2)
 
 // الواجب مراجعة الدرس الاول والثاني
+
